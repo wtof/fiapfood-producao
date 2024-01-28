@@ -19,7 +19,7 @@ spec:
       - name: fiapfood-producao-container
         image: wtof/fiapfood-producao:latest
         ports:
-        - containerPort: 8081
+        - containerPort: 8082
         envFrom:
         - secretRef:
             name: db-producao-secret
@@ -29,14 +29,14 @@ spec:
         livenessProbe:
           httpGet:
             path: /swagger-ui/index.html
-            port: 8081
+            port: 8082
           periodSeconds: 60
           failureThreshold: 5
           initialDelaySeconds: 180
         readinessProbe:
           httpGet:
             path: /swagger-ui/index.html
-            port: 8081
+            port: 8082
           periodSeconds: 60
           failureThreshold: 5
           initialDelaySeconds: 180
