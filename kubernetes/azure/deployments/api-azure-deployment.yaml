@@ -8,12 +8,12 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: fiapfood-producao
+      app: fiapfood-api-producao
   template:
     metadata:
-      name: fiapfood-producao
+      name: fiapfood-api-producao
       labels:
-        app: fiapfood-producao
+        app: fiapfood-api-producao
     spec:
       containers:
       - name: fiapfood-producao-container
